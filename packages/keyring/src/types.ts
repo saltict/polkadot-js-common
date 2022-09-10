@@ -50,6 +50,7 @@ export interface KeyringPair {
   verify (message: HexString | string | Uint8Array, signature: Uint8Array, signerPublic: HexString | string | Uint8Array): boolean;
   vrfSign (message: HexString | string | Uint8Array, context?: HexString | string | Uint8Array, extra?: HexString | string | Uint8Array): Uint8Array;
   vrfVerify (message: HexString | string | Uint8Array, vrfResult: Uint8Array, signerPublic: HexString | Uint8Array | string, context?: HexString | string | Uint8Array, extra?: HexString | string | Uint8Array): boolean;
+  getPrivateKey (): Uint8Array;
 }
 
 export interface KeyringPairs {

@@ -70,7 +70,9 @@ const pair: KeyringPair = {
     new Uint8Array(96),
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   vrfVerify: (message: Uint8Array, vrfResult: Uint8Array, context?: string | Uint8Array, extra?: string | Uint8Array): boolean =>
-    false
+    false,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  getPrivateKey: (): Uint8Array => new Uint8Array(64),
 };
 
 export function nobody (): KeyringPair {
